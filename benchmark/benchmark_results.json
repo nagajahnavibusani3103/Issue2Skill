@@ -1,0 +1,728 @@
+{
+  "timestamp": 1790798037,
+  "total_issues": 35,
+  "categories": {
+    "ambiguous_and_conflicting_issues": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 0
+    },
+    "bug_fix_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 3
+    },
+    "feature_addition_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 4
+    },
+    "performance_optimization_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 4
+    },
+    "refactoring_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 3
+    },
+    "security_vulnerability_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 4
+    },
+    "tool_automation_skill": {
+      "total": 5,
+      "i2s_passed": 5,
+      "baseline_passed": 5
+    }
+  },
+  "metrics": {
+    "issue2skill": {
+      "spec_compliance_rate": 100.0,
+      "gate_detection_accuracy": 100.0,
+      "traceability_coverage_rate": 100.0,
+      "behavioral_test_pass_rate": 100.0,
+      "zero_regression_rate": 100.0
+    },
+    "direct_llm_baseline": {
+      "spec_compliance_rate": 80.0,
+      "gate_detection_accuracy": 0.0,
+      "traceability_coverage_rate": 0.0,
+      "behavioral_test_pass_rate": 0.0,
+      "zero_regression_rate": 0.0
+    }
+  },
+  "details": {
+    "issue2skill": [
+      {
+        "issue_id": "issue-01",
+        "category": "bug_fix_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4805
+      },
+      {
+        "issue_id": "issue-02",
+        "category": "bug_fix_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4766
+      },
+      {
+        "issue_id": "issue-03",
+        "category": "bug_fix_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4753
+      },
+      {
+        "issue_id": "issue-04",
+        "category": "bug_fix_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4771
+      },
+      {
+        "issue_id": "issue-05",
+        "category": "bug_fix_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4710
+      },
+      {
+        "issue_id": "issue-06",
+        "category": "feature_addition_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4698
+      },
+      {
+        "issue_id": "issue-07",
+        "category": "feature_addition_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4714
+      },
+      {
+        "issue_id": "issue-08",
+        "category": "feature_addition_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4721
+      },
+      {
+        "issue_id": "issue-09",
+        "category": "feature_addition_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4833
+      },
+      {
+        "issue_id": "issue-10",
+        "category": "feature_addition_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4771
+      },
+      {
+        "issue_id": "issue-11",
+        "category": "refactoring_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4761
+      },
+      {
+        "issue_id": "issue-12",
+        "category": "refactoring_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4732
+      },
+      {
+        "issue_id": "issue-13",
+        "category": "refactoring_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4935
+      },
+      {
+        "issue_id": "issue-14",
+        "category": "refactoring_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4743
+      },
+      {
+        "issue_id": "issue-15",
+        "category": "refactoring_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4733
+      },
+      {
+        "issue_id": "issue-16",
+        "category": "performance_optimization_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4713
+      },
+      {
+        "issue_id": "issue-17",
+        "category": "performance_optimization_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4867
+      },
+      {
+        "issue_id": "issue-18",
+        "category": "performance_optimization_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4765
+      },
+      {
+        "issue_id": "issue-19",
+        "category": "performance_optimization_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4769
+      },
+      {
+        "issue_id": "issue-20",
+        "category": "performance_optimization_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4751
+      },
+      {
+        "issue_id": "issue-21",
+        "category": "security_vulnerability_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4759
+      },
+      {
+        "issue_id": "issue-22",
+        "category": "security_vulnerability_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4760
+      },
+      {
+        "issue_id": "issue-23",
+        "category": "security_vulnerability_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4748
+      },
+      {
+        "issue_id": "issue-24",
+        "category": "security_vulnerability_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4717
+      },
+      {
+        "issue_id": "issue-25",
+        "category": "security_vulnerability_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4770
+      },
+      {
+        "issue_id": "issue-26",
+        "category": "tool_automation_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4684
+      },
+      {
+        "issue_id": "issue-27",
+        "category": "tool_automation_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4778
+      },
+      {
+        "issue_id": "issue-28",
+        "category": "tool_automation_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4780
+      },
+      {
+        "issue_id": "issue-29",
+        "category": "tool_automation_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4810
+      },
+      {
+        "issue_id": "issue-30",
+        "category": "tool_automation_skill",
+        "final_state": "VALIDATED",
+        "expected_gate": null,
+        "gate_correct": true,
+        "spec_compliant": true,
+        "traceability_coverage": 1.0,
+        "behavioral_rate": 1.0,
+        "duration_ms": 4668
+      },
+      {
+        "issue_id": "issue-31",
+        "category": "ambiguous_and_conflicting_issues",
+        "final_state": "BLOCKED_AMBIGUITY",
+        "expected_gate": "BLOCKED_AMBIGUITY",
+        "gate_correct": true,
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": null,
+        "duration_ms": 4345
+      },
+      {
+        "issue_id": "issue-32",
+        "category": "ambiguous_and_conflicting_issues",
+        "final_state": "BLOCKED_AMBIGUITY",
+        "expected_gate": "BLOCKED_AMBIGUITY",
+        "gate_correct": true,
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": null,
+        "duration_ms": 4383
+      },
+      {
+        "issue_id": "issue-33",
+        "category": "ambiguous_and_conflicting_issues",
+        "final_state": "BLOCKED_CONFLICT",
+        "expected_gate": "BLOCKED_CONFLICT",
+        "gate_correct": true,
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": null,
+        "duration_ms": 4339
+      },
+      {
+        "issue_id": "issue-34",
+        "category": "ambiguous_and_conflicting_issues",
+        "final_state": "BLOCKED_CONFLICT",
+        "expected_gate": "BLOCKED_CONFLICT",
+        "gate_correct": true,
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": null,
+        "duration_ms": 4353
+      },
+      {
+        "issue_id": "issue-35",
+        "category": "ambiguous_and_conflicting_issues",
+        "final_state": "BLOCKED_AMBIGUITY",
+        "expected_gate": "BLOCKED_AMBIGUITY",
+        "gate_correct": true,
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": null,
+        "duration_ms": 4322
+      }
+    ],
+    "baseline": [
+      {
+        "issue_id": "issue-01",
+        "category": "bug_fix_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4347
+      },
+      {
+        "issue_id": "issue-02",
+        "category": "bug_fix_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4356
+      },
+      {
+        "issue_id": "issue-03",
+        "category": "bug_fix_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4320
+      },
+      {
+        "issue_id": "issue-04",
+        "category": "bug_fix_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4358
+      },
+      {
+        "issue_id": "issue-05",
+        "category": "bug_fix_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4355
+      },
+      {
+        "issue_id": "issue-06",
+        "category": "feature_addition_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4334
+      },
+      {
+        "issue_id": "issue-07",
+        "category": "feature_addition_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4370
+      },
+      {
+        "issue_id": "issue-08",
+        "category": "feature_addition_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4338
+      },
+      {
+        "issue_id": "issue-09",
+        "category": "feature_addition_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4338
+      },
+      {
+        "issue_id": "issue-10",
+        "category": "feature_addition_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4372
+      },
+      {
+        "issue_id": "issue-11",
+        "category": "refactoring_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4330
+      },
+      {
+        "issue_id": "issue-12",
+        "category": "refactoring_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4337
+      },
+      {
+        "issue_id": "issue-13",
+        "category": "refactoring_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4388
+      },
+      {
+        "issue_id": "issue-14",
+        "category": "refactoring_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4370
+      },
+      {
+        "issue_id": "issue-15",
+        "category": "refactoring_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4348
+      },
+      {
+        "issue_id": "issue-16",
+        "category": "performance_optimization_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4364
+      },
+      {
+        "issue_id": "issue-17",
+        "category": "performance_optimization_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4363
+      },
+      {
+        "issue_id": "issue-18",
+        "category": "performance_optimization_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4341
+      },
+      {
+        "issue_id": "issue-19",
+        "category": "performance_optimization_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4350
+      },
+      {
+        "issue_id": "issue-20",
+        "category": "performance_optimization_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4331
+      },
+      {
+        "issue_id": "issue-21",
+        "category": "security_vulnerability_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4333
+      },
+      {
+        "issue_id": "issue-22",
+        "category": "security_vulnerability_skill",
+        "spec_compliant": false,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4407
+      },
+      {
+        "issue_id": "issue-23",
+        "category": "security_vulnerability_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4307
+      },
+      {
+        "issue_id": "issue-24",
+        "category": "security_vulnerability_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4343
+      },
+      {
+        "issue_id": "issue-25",
+        "category": "security_vulnerability_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4361
+      },
+      {
+        "issue_id": "issue-26",
+        "category": "tool_automation_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4316
+      },
+      {
+        "issue_id": "issue-27",
+        "category": "tool_automation_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4360
+      },
+      {
+        "issue_id": "issue-28",
+        "category": "tool_automation_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4360
+      },
+      {
+        "issue_id": "issue-29",
+        "category": "tool_automation_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4350
+      },
+      {
+        "issue_id": "issue-30",
+        "category": "tool_automation_skill",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4324
+      },
+      {
+        "issue_id": "issue-31",
+        "category": "ambiguous_and_conflicting_issues",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4306
+      },
+      {
+        "issue_id": "issue-32",
+        "category": "ambiguous_and_conflicting_issues",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4357
+      },
+      {
+        "issue_id": "issue-33",
+        "category": "ambiguous_and_conflicting_issues",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4329
+      },
+      {
+        "issue_id": "issue-34",
+        "category": "ambiguous_and_conflicting_issues",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4330
+      },
+      {
+        "issue_id": "issue-35",
+        "category": "ambiguous_and_conflicting_issues",
+        "spec_compliant": true,
+        "traceability_coverage": 0.0,
+        "behavioral_rate": 0.0,
+        "duration_ms": 4358
+      }
+    ]
+  }
+}

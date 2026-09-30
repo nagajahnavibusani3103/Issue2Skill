@@ -1,0 +1,393 @@
+[
+  {
+    "id": "issue-01",
+    "category": "bug_fix_skill",
+    "title": "CSV Parser Fails on Unescaped Quotes in Multiline Fields",
+    "body": "RFC 4180 multiline CSV records fail when quote escaping is inconsistent. Build a skill that parses, sanitizes, and normalizes escaped quote characters and handles multiline row boundaries safely.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "csv-rfc4180-parser",
+    "key_requirements": ["Parse RFC 4180 CSV rows", "Sanitize unescaped quote characters", "Preserve multiline field boundaries"],
+    "reference_test_types": ["POSITIVE", "EDGE_CASE"]
+  },
+  {
+    "id": "issue-02",
+    "category": "bug_fix_skill",
+    "title": "JWT Token Expiration Check Off-by-One Second Error",
+    "body": "Tokens expiring precisely at boundary second fail validation due to strict timestamp inequality. Create an agent skill to validate JWT claims with configurable clock skew leeway tolerance.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "jwt-claim-validator",
+    "key_requirements": ["Verify JWT exp and nbf claims", "Apply configurable clock skew tolerance", "Emit structured validation verdict"],
+    "reference_test_types": ["POSITIVE", "EDGE_CASE"]
+  },
+  {
+    "id": "issue-03",
+    "category": "bug_fix_skill",
+    "title": "Null Pointer Exception in JSON Nested Object Key Traversal",
+    "body": "Navigating deeply nested structures causes unhandled runtime exceptions when intermediate keys are null or undefined. Provide a safe key-path traversal skill with fallback defaults.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "json-safe-traversal",
+    "key_requirements": ["Traverse dot-delimited key paths safely", "Return configurable fallback on null/missing nodes", "Support array indexing in key paths"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-04",
+    "category": "bug_fix_skill",
+    "title": "Integer Overflow in Rate Limiter Sliding Window Counter",
+    "body": "Sliding window counter overflows 32-bit integer limits under sustained burst traffic. Synthesize an agent skill that tracks sliding request windows using 64-bit millisecond bucket precision.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "sliding-window-rate-limiter",
+    "key_requirements": ["Compute sliding window request rates", "Prevent integer overflow using 64-bit epoch counters", "Enforce rate quota with precise remaining quota reporting"],
+    "reference_test_types": ["POSITIVE", "EDGE_CASE"]
+  },
+  {
+    "id": "issue-05",
+    "category": "bug_fix_skill",
+    "title": "Regex Denial of Service in Email Validation Function",
+    "body": "Legacy regex-based email validator suffers catastrophic backtracking on crafted trailing domain inputs. Implement an RFC 5322 email syntax validation skill using deterministic linear-time parsing.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "redos-safe-email-validator",
+    "key_requirements": ["Validate RFC 5322 address syntax", "Execute in linear time O(n) without backtracking", "Reject malformed domains cleanly"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE", "EDGE_CASE"]
+  },
+
+  {
+    "id": "issue-06",
+    "category": "feature_addition_skill",
+    "title": "Generate OpenAPI 3.1 Spec from Fastify Route Definitions",
+    "body": "Need an automated skill that inspects Fastify route schemas (params, query, body, responses) and outputs a valid OpenAPI 3.1 JSON/YAML specification.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "fastify-openapi-generator",
+    "key_requirements": ["Extract route methods and URL patterns", "Translate JSON Schema definitions to OpenAPI 3.1 components", "Generate valid openapi.json document"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-07",
+    "category": "feature_addition_skill",
+    "title": "Automated Markdown Changelog Generator from Conventional Commits",
+    "body": "Extract conventional git commit messages (feat, fix, docs, refactor, perf) between release tags and compile an organized, grouped markdown release changelog with issue links.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "conventional-changelog-generator",
+    "key_requirements": ["Parse conventional commit headers and bodies", "Group entries by category (Features, Fixes, Performance)", "Format output as standard KeepAChangelog markdown"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-08",
+    "category": "feature_addition_skill",
+    "title": "Add GitHub Actions Workflow Validator for Deprecated Node Versions",
+    "body": "Scan repository `.github/workflows/*.yml` files, detect usage of deprecated Node.js runtimes (Node 12, 14, 16) or deprecated actions, and generate automated upgrade suggestions.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "gha-workflow-linter",
+    "key_requirements": ["Scan workflow YAML files", "Identify deprecated runtime versions", "Output diagnostic report with remediation patches"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-09",
+    "category": "feature_addition_skill",
+    "title": "Implement S3 Pre-Signed Upload URL Generator CLI Skill",
+    "body": "Create an agent skill that accepts an object key, content-type, and expiration interval, and generates an authorized AWS S3 pre-signed PUT upload URL.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "s3-presigned-url-signer",
+    "key_requirements": ["Validate bucket and object key arguments", "Calculate SigV4 query authentication parameters", "Return JSON payload with signed URL and expiration timestamp"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-10",
+    "category": "feature_addition_skill",
+    "title": "Create SQLite to Parquet File Export Agent Skill",
+    "body": "Build an agent skill that extracts tables from a local SQLite database and serializes them into columnar Apache Parquet format with gzip compression.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "sqlite-to-parquet-exporter",
+    "key_requirements": ["Read SQLite table schema and records", "Map SQLite datatypes to Parquet columnar types", "Save compressed parquet file to destination directory"],
+    "reference_test_types": ["POSITIVE"]
+  },
+
+  {
+    "id": "issue-11",
+    "category": "refactoring_skill",
+    "title": "Decouple Database Persistence Logic from Express Handlers into Repository Pattern",
+    "body": "Express HTTP route handlers currently execute inline SQL queries. Synthesize an agent skill that extracts data access logic into separate Repository classes with dependency injection.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "express-repository-extractor",
+    "key_requirements": ["Identify raw SQL/ORM calls inside route handlers", "Generate repository interface and class", "Refactor handler to invoke repository methods"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-12",
+    "category": "refactoring_skill",
+    "title": "Migrate Synchronous File I/O to Async Streams in Node.js File Processing Pipeline",
+    "body": "Convert `fs.readFileSync` and `fs.writeFileSync` in high-throughput log processing pipeline to Node.js `stream.pipeline` using `readline` and backpressure handling.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "sync-to-stream-migrator",
+    "key_requirements": ["Detect synchronous file system calls", "Generate async streaming pipeline with backpressure control", "Ensure memory usage remains bounded under large input files"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-13",
+    "category": "refactoring_skill",
+    "title": "Extract Hardcoded Environment Constants into Pydantic BaseSettings Schema",
+    "body": "Extract hardcoded `os.environ.get()` calls scattered across Python codebase into a unified, type-validated Pydantic `BaseSettings` configuration module with default fallbacks.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "pydantic-settings-extractor",
+    "key_requirements": ["Scan source files for os.getenv / os.environ accesses", "Create typed Pydantic Settings class with field defaults", "Replace disparate accesses with settings singleton"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-14",
+    "category": "refactoring_skill",
+    "title": "Refactor Monolithic Redux Reducer into Slices using Redux Toolkit",
+    "body": "Migrate legacy 800-line switch-case Redux reducer into modular `createSlice` definitions using Immer mutation syntax and type-safe action creators.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "redux-slice-refactorer",
+    "key_requirements": ["Parse legacy switch-case action branches", "Generate modern createSlice reducers", "Export strongly typed action creators and state selectors"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-15",
+    "category": "refactoring_skill",
+    "title": "Convert Callback Hell in Legacy API Fetcher to Async/Await with Exponential Backoff",
+    "body": "Refactor deeply nested HTTP request callbacks into clean `async/await` control flow with randomized jitter and exponential backoff retry mechanics.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "async-retry-refactorer",
+    "key_requirements": ["Flatten nested callback error handlers", "Implement promise-based async/await syntax", "Incorporate exponential backoff retry loop with max attempts"],
+    "reference_test_types": ["POSITIVE"]
+  },
+
+  {
+    "id": "issue-16",
+    "category": "performance_optimization_skill",
+    "title": "Optimize N+1 Query Cascade in User Profile Association Loader",
+    "body": "Profile page triggers 1 initial query followed by 100 individual queries for user badges. Implement a dataloader batching skill that groups primary keys into single `IN (?)` queries.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "dataloader-query-batcher",
+    "key_requirements": ["Coalesce individual ID lookups into tick-based queue", "Execute single bulk query using SQL IN operator", "Distribute results back to individual call promises"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-17",
+    "category": "performance_optimization_skill",
+    "title": "Implement LRU Memory Cache for Expensive LLM Embedding Vector Lookups",
+    "body": "Repeated text similarity queries cause redundant vector embedding computations. Build an agent skill with thread-safe Least Recently Used (LRU) memory cache and TTL expiration.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "lru-embedding-cache",
+    "key_requirements": ["Store key-vector pairs in bounded doubly-linked list hashmap", "Evict least recently used entries when capacity reached", "Enforce item time-to-live expiration"],
+    "reference_test_types": ["POSITIVE", "EDGE_CASE"]
+  },
+  {
+    "id": "issue-18",
+    "category": "performance_optimization_skill",
+    "title": "Stream Large JSON Lines Datasets Instead of Buffering Whole File in Memory",
+    "body": "Processing 5GB telemetry .jsonl dumps causes Out Of Memory crashes. Create a streaming parser skill that processes records line-by-line using chunked iterators.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "jsonl-streaming-processor",
+    "key_requirements": ["Iterate over file in buffered 64KB chunks", "Parse newline-separated JSON objects individually", "Maintain bounded memory footprint below 20MB"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-19",
+    "category": "performance_optimization_skill",
+    "title": "Batch Redis Pipeline Operations for High-Throughput Event Ingestion",
+    "body": "Sending individual Redis HSET commands creates network latency bottlenecks. Implement a pipeline buffer skill that batches commands in 500-item chunks or 10ms flush intervals.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "redis-pipeline-batcher",
+    "key_requirements": ["Buffer outgoing Redis operations in memory", "Flush pipeline when batch threshold or timer expires", "Handle server reconnection and partial pipeline retries"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-20",
+    "category": "performance_optimization_skill",
+    "title": "Parallelize Independent Git Submodule Fetch Operations",
+    "body": "Sequential submodule fetching takes over 4 minutes in CI. Create a concurrent worker pool skill that fetches independent submodules in parallel up to CPU core count.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "parallel-submodule-fetcher",
+    "key_requirements": ["Parse .gitmodules to discover independent submodules", "Dispatch git fetch jobs across worker pool", "Aggregate and report per-module fetch duration and status"],
+    "reference_test_types": ["POSITIVE"]
+  },
+
+  {
+    "id": "issue-21",
+    "category": "security_vulnerability_skill",
+    "title": "Remediate SQL Injection in Raw Query Parameter Concatenation",
+    "body": "Raw string concatenation in dynamic search filters allows arbitrary SQL injection. Implement an automated query parameterizer skill that converts string interpolation to bound placeholders.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "sql-injection-parameterizer",
+    "key_requirements": ["Detect raw string formatting inside SQL statements", "Replace literal parameters with positional or named placeholders", "Generate safe parameterized query tuples"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-22",
+    "category": "security_vulnerability_skill",
+    "title": "Prevent Server-Side Request Forgery (SSRF) in Image URL Fetcher",
+    "body": "Avatar upload by URL allows fetching internal cloud metadata (169.254.169.254) and localhost services. Build an SSRF protection skill that resolves DNS, validates IP ranges, and blocks private networks.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "ssrf-url-shield",
+    "key_requirements": ["Resolve target host DNS prior to HTTP connection", "Reject private, loopback (127.0.0.0/8), and link-local IP addresses", "Enforce strict HTTPS scheme and allowed port allowlist"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-23",
+    "category": "security_vulnerability_skill",
+    "title": "Enforce Strict Path Traversal Sanitization in File Upload Unzip Handler",
+    "body": "ZipSlip vulnerability in archive extraction utility allows overwriting arbitrary system files via `../` entries. Synthesize a hardened zip extraction skill with canonical path validation.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "zip-path-traversal-guard",
+    "key_requirements": ["Inspect archive member paths for directory traversal characters", "Verify resolved destination path starts strictly within target directory", "Reject malicious zip entries with security exception"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-24",
+    "category": "security_vulnerability_skill",
+    "title": "Mask Sensitive PII and API Secrets in Structured Application Logs",
+    "body": "Application logs inadvertently expose Bearer tokens, passwords, credit card numbers, and API keys. Build a log redactor skill that redacts sensitive keys and regex patterns before emission.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "pii-log-redactor",
+    "key_requirements": ["Scan JSON log objects recursively", "Redact sensitive keys (password, token, secret, auth, credit_card)", "Mask credential strings with `[REDACTED]` replacement"],
+    "reference_test_types": ["POSITIVE", "EDGE_CASE"]
+  },
+  {
+    "id": "issue-25",
+    "category": "security_vulnerability_skill",
+    "title": "Prevent Timing Attack Vulnerability in HMAC Signature Comparison",
+    "body": "Webhook signature verification uses standard string equality operator `==` which is vulnerable to side-channel timing analysis. Create a constant-time cryptographic verification skill.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "constant-time-hmac-verifier",
+    "key_requirements": ["Compute expected HMAC SHA-256 digest using secret key", "Execute constant-time byte-by-byte comparison", "Return boolean verification result resistant to timing leaks"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+
+  {
+    "id": "issue-26",
+    "category": "tool_automation_skill",
+    "title": "Automated Dockerfile Multi-Stage Build Optimizer",
+    "body": "Container images exceed 1.2GB because build tools are packaged into final image. Synthesize an agent skill that refactors single-stage Dockerfiles into optimized builder and runtime multi-stage patterns.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "dockerfile-multistage-optimizer",
+    "key_requirements": ["Separate compilation dependencies into builder stage", "Copy only production binaries/dist to minimal slim runtime image", "Enforce non-root USER directive in final container"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-27",
+    "category": "tool_automation_skill",
+    "title": "Git Pre-Commit Hook Installer for Secret Detection with Gitleaks",
+    "body": "Developers frequently commit private keys accidentally. Implement a tool automation skill that configures a portable `.githooks/pre-commit` script that scans staged diffs with Gitleaks before commit.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "gitleaks-precommit-installer",
+    "key_requirements": ["Check git repository root", "Install executable pre-commit hook script", "Abort git commit when high-entropy secret patterns are detected"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-28",
+    "category": "tool_automation_skill",
+    "title": "Automated Dead Code and Unused Export Scanner for TypeScript",
+    "body": "TypeScript codebase has accumulated obsolete helper functions and dead exports. Create a static analysis skill that traces module dependency graphs and flags unreferenced exports.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "ts-deadcode-scanner",
+    "key_requirements": ["Parse TypeScript AST export declarations", "Cross-reference export identifiers against project import statements", "Generate structured list of unused functions and types"],
+    "reference_test_types": ["POSITIVE"]
+  },
+  {
+    "id": "issue-29",
+    "category": "tool_automation_skill",
+    "title": "Kubernetes YAML Resource Limits and Health Check Validator",
+    "body": "Deployments crash in production due to missing CPU/memory limits or absent liveness/readiness probes. Build a linter skill that audits Kubernetes deployment manifests against production best practices.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "k8s-manifest-auditor",
+    "key_requirements": ["Parse Kubernetes Deployment and StatefulSet YAML files", "Verify existence of cpu and memory requests and limits", "Validate livenessProbe and readinessProbe configurations"],
+    "reference_test_types": ["POSITIVE", "NEGATIVE"]
+  },
+  {
+    "id": "issue-30",
+    "category": "tool_automation_skill",
+    "title": "Automated Dependabot Vulnerability PR Auto-Triage Agent",
+    "body": "Automate security PR review by checking whether Dependabot dependency upgrades pass all automated CI tests and contain semantic patch or minor version increments.",
+    "expected_classification": "SKILL_COMPATIBLE",
+    "expected_blocking_gate": null,
+    "target_skill_name": "dependabot-pr-triager",
+    "key_requirements": ["Inspect GitHub PR metadata and semver version bump", "Verify all required status checks have passed", "Emit approve/merge recommendation payload"],
+    "reference_test_types": ["POSITIVE"]
+  },
+
+  {
+    "id": "issue-31",
+    "category": "ambiguous_and_conflicting_issues",
+    "title": "Make the caching layer faster",
+    "body": "The current cache is slow. Optimize the caching layer and speed up performance across the system without clear latency targets.",
+    "expected_classification": "AMBIGUOUS",
+    "expected_blocking_gate": "BLOCKED_AMBIGUITY",
+    "target_skill_name": "ambiguous-caching-skill",
+    "key_requirements": ["Pending clarification on storage mechanism and latency targets"],
+    "reference_test_types": []
+  },
+  {
+    "id": "issue-32",
+    "category": "ambiguous_and_conflicting_issues",
+    "title": "Support all databases and cloud providers",
+    "body": "The agent should support all databases and cloud providers simultaneously without specific adapter requirements or scope limits.",
+    "expected_classification": "AMBIGUOUS",
+    "expected_blocking_gate": "BLOCKED_AMBIGUITY",
+    "target_skill_name": "broad-scope-skill",
+    "key_requirements": ["Pending clarification on target cloud provider and database engines"],
+    "reference_test_types": []
+  },
+  {
+    "id": "issue-33",
+    "category": "ambiguous_and_conflicting_issues",
+    "title": "Implement in-memory storage with durable persistent recovery across reboots",
+    "body": "The skill must store all state in purely transient volatile in-memory storage without disk access, but also require durable persistent recovery across reboots by persisting state to disk.",
+    "expected_classification": "CONFLICTING",
+    "expected_blocking_gate": "BLOCKED_CONFLICT",
+    "target_skill_name": "conflicting-memory-skill",
+    "key_requirements": ["Requires conflict reconciliation between transient in-memory and persistent disk"],
+    "reference_test_types": []
+  },
+  {
+    "id": "issue-34",
+    "category": "ambiguous_and_conflicting_issues",
+    "title": "Completely public without passwords or tokens but ensure strict user access control",
+    "body": "Make authentication completely public without passwords or tokens for all incoming requests, but ensure strict user access control and tenant isolation.",
+    "expected_classification": "CONFLICTING",
+    "expected_blocking_gate": "BLOCKED_CONFLICT",
+    "target_skill_name": "conflicting-auth-skill",
+    "key_requirements": ["Requires conflict reconciliation between unauthenticated public access and strict access control"],
+    "reference_test_types": []
+  },
+  {
+    "id": "issue-35",
+    "category": "ambiguous_and_conflicting_issues",
+    "title": "Update the system",
+    "body": "Please update.",
+    "expected_classification": "AMBIGUOUS",
+    "expected_blocking_gate": "BLOCKED_AMBIGUITY",
+    "target_skill_name": "vague-update-skill",
+    "key_requirements": ["Pending clarification on system components and update objective"],
+    "reference_test_types": []
+  }
+]
